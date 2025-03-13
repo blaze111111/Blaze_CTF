@@ -1,5 +1,6 @@
 PICO CTF - IntroToBurp
 
-Difficulty level - [x] Easy
+Difficulty level 
+- [x] Easy
 - [] Medium
-- [ ] Hard
+- [] Hard
