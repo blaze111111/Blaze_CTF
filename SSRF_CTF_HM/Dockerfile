@@ -1,15 +1,8 @@
-# Dockerfile (player image)
 FROM python:3.11-slim
-
 WORKDIR /app
+COPY requirements.txt /app/
+RUN pip install --no-cache-dir -r requirements.txt
+COPY src/ /app/
+EXPOSE 8080
+CMD ["python", "main.py"]
 
-# copy only the player-visible parts
-COPY src/ /app/src/
-COPY tests/ /app/tests/
-COPY .gitignore /app/.gitignore
-
-RUN pip install --no-cache-dir flask requests pytest
-
-EXPOSE 5000
-
-CMD ["python", "/app/src/main.py"]

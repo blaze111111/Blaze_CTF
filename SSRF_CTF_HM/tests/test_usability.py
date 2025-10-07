@@ -1,7 +1,8 @@
 # tests/test_usability.py
 import requests
+import os
+BASE = os.getenv("BASE", "http://127.0.0.1:8080")
 
-BASE = "http://localhost:5000"
 
 def test_health():
     r = requests.get(f"{BASE}/health")

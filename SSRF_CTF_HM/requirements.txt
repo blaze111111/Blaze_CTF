@@ -1,0 +1,9 @@
+flask
+requests
+pytest
+
+fastapi==0.92.0
+pydantic==1.10.5
+uvicorn==0.20.0
+httpx==0.23.3
+pytest==7.2.1

@@ -1,14 +1,21 @@
 # src/main.py  (INTENTIONALLY VULNERABLE)
 # Players will edit this file to secure it.
 from flask import Flask, request, Response, jsonify
-import requests
+import requests,os
 
-app = Flask(__name__)
+
 
 app = Flask(__name__)
 
 registered_callbacks = []
 
+    
+if __name__ == "__main__":
+    import os
+    port = int(os.getenv("PORT", 8080))
+    app.run(host="0.0.0.0", port=port)
+
+    
 # Simulated internal endpoint that is supposed to be internal-only.
 # NOTE: This endpoint does NOT contain the real flag string.
 # Instructor's grader/flag file is stored separately in flags/flag.txt (hidden).
