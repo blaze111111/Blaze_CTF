@@ -1,0 +1,3 @@
+flag1 = HM2025{FIXedAP
+
+flag2 = P_SSRF}
